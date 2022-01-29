@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim"
+  use "folke/trouble.nvim"
 
   -- Colorschemes
   use "ellisonleao/gruvbox.nvim"
