@@ -69,3 +69,12 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 
+-- complile and run c++
+vim.cmd("autocmd  FileType cpp lua CppShortcuts()")
+function CppShortcuts()
+  vim.opt.mp = "g++ -O2 -Wall --std=c++17 -Wno-unused-result %:r.cpp -o %:r"
+  keymap("n", "<F2>", "<cmd>vs %:r.in<CR>", opts)
+  keymap("n", "<F3>", "<cmd>!time ./%:r < %:r.in <CR>", opts)
+  keymap("n", "<F4>", "<cmd>w<CR><cmd>make<CR>", opts)
+  keymap("n", "<F5>", "<cmd>w<CR><cmd>make<CR><cmd>!time ./%:r < %:r.in<CR>", opts)
+end
