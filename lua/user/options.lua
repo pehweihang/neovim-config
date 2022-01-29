@@ -38,6 +38,12 @@ local options = {
 vim.opt.iskeyword:append "-"
 vim.opt.shortmess:append "c"
 
+if vim.bo.filetype == 'python' then
+  options.tabstop = 4
+  options.shiftwidth = 4
+end
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
