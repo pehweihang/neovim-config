@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim"
   use "folke/trouble.nvim"
+  use "ellisonleao/glow.nvim"
 
   -- Colorschemes
   use "ellisonleao/gruvbox.nvim"
