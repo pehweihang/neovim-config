@@ -8,8 +8,9 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
-local sources = {
-    formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
+sources = {
+    formatting.prettier.with{},
+    formatting.eslint_d,
     formatting.black.with { extra_args = { "--fast" } },
     -- formatting.yapf,
     diagnostics.flake8,
