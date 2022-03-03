@@ -6,3 +6,5 @@ end
 require("luasnip/loaders/from_vscode").load{
   paths = "~/.config/nvim/lua/user/cp-snippets/"
 }
+
+luasnip.filetype_extend("typescript", {"javascript"})
