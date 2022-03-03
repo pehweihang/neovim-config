@@ -46,12 +46,12 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
-  use 'nvim-lualine/lualine.nvim'
-  use "akinsho/toggleterm.nvim"
+  use "kyazdani42/nvim-web-devicons" -- Glyphs and icons
+  use "kyazdani42/nvim-tree.lua" -- File explorer
+  use "akinsho/bufferline.nvim" -- bufferline
+  use "moll/vim-bbye" -- better buffer closing
+  use 'nvim-lualine/lualine.nvim' -- statusline
+  use "akinsho/toggleterm.nvim" -- terminal window
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"
   use "folke/trouble.nvim"
   use "ellisonleao/glow.nvim"
+  use "ray-x/lsp_signature.nvim"
 
   -- Colorschemes
   use "ellisonleao/gruvbox.nvim"
@@ -95,7 +96,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
+  use {"lewis6991/gitsigns.nvim", commit='1d1f043acf025f919b8dd12bb672569109c7f099'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
