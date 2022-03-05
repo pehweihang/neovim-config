@@ -12,8 +12,9 @@ local sources = {
     formatting.prettier,
     formatting.eslint_d,
     formatting.black.with { extra_args = { "--fast", "-l 79"} },
-    -- formatting.yapf,
+    formatting.stylua,
     diagnostics.flake8,
+    
 }
 
 null_ls.setup {
