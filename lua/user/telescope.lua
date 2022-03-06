@@ -116,4 +116,3 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true })
 
-telescope.load_extension("neoclip")
